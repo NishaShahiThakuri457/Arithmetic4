@@ -2,7 +2,8 @@ package com.e.arithmetic;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static junit.framework.TestCase.assertEquals;
+
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -23,9 +24,19 @@ public class ExampleUnitTest {
     public void testSubtraction()
     {
         Arithmetic arithmetic=new Arithmetic();
-        float expectedResult=10;
-        float actualResult=arithmetic.subtract(4,6);
+        float expectedResult=2;
+        float actualResult=arithmetic.subtract(6,4);
         assertEquals(expectedResult,actualResult);
     }
+
+    @Test
+    public void testDivide()
+    {
+        Arithmetic arithmetic=new Arithmetic();
+        float expectedResult=5;
+        float actualResult=arithmetic.divide(10,2);
+        assertEquals(expectedResult,actualResult);
+    }
+
 
 }
